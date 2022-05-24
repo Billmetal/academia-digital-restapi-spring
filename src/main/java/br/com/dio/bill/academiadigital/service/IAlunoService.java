@@ -24,10 +24,19 @@ public interface IAlunoService {
 	  Aluno get(Long id);
 
 	  /**
-	   * Retorna os Alunos que estão no banco de dados.
-	   * @return Uma lista os Alunos que estão salvas no DB.
+	   * Retorna os Alunos que estão no banco de@Override
+	   * dados de acordo com a data de nascimento.
+	   * @param dataDeNascimento data de nascimento que será buscada.
+	   * @return Uma lista os Alunos que estão salvas no DB de acordo com a data de nascimento.
 	   */
 	  List<Aluno> getAll(String dataDeNascimento);
+	  
+	  /**
+	   * Retorna os Alunos que estão no banco de@Override
+	   * dados.
+	   * @return Uma lista os Alunos que estão salvas no DB.
+	   */
+	  List<Aluno> getAll();
 
 	  /**
 	   * Atualiza o Aluno.
