@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.dio.bill.academiadigital.entity.Matricula;
@@ -30,6 +31,11 @@ public class MatriculaController {
 	@GetMapping
 	public List<Matricula> getAll(){
 		return service.getAll();
+	}
+	
+	@GetMapping("/bairro")
+	public List<Matricula> getAllByBairro(@RequestParam(value = "bairro", required = false) String bairro){
+		return service.getAll(bairro);
 	}
 
 }

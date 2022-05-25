@@ -34,7 +34,7 @@ public interface IMatriculaService {
 	   * @return - uma lista com todas as Matrículas que estão salvas no DB.
 	   */
 	  List<Matricula> getAll();
-
+	  
 	  /**
 	   * Deleta uma Matrícula específica.
 	   * @param id - id da Matrícula que será removida.

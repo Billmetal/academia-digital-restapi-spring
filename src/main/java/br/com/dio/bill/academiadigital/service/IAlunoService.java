@@ -29,7 +29,7 @@ public interface IAlunoService {
 	   * @param dataDeNascimento data de nascimento que será buscada.
 	   * @return Uma lista os Alunos que estão salvas no DB de acordo com a data de nascimento.
 	   */
-	  List<Aluno> getAll(String dataDeNascimento);
+	  List<Aluno> getAllByDataDeNascimento(String dataDeNascimento);
 	  
 	  /**
 	   * Retorna os Alunos que estão no banco de@Override
