@@ -22,10 +22,18 @@ public interface IMatriculaService {
 	  Matricula get(Long id);
 
 	  /**
+	   * Retorna todas as Matrículas que estão no banco de dados que pertencem 
+	   * ao bairro passado.
+	   * @param bairro - bairro que será pesquisado no banco de dados.
+	   * @return - uma lista com todas as Matrículas que são do bairro informado.
+	   */
+	  List<Matricula> getAll(String bairro);
+	  
+	  /**
 	   * Retorna todas as Matrículas que estão no banco de dados.
 	   * @return - uma lista com todas as Matrículas que estão salvas no DB.
 	   */
-	  List<Matricula> getAll(String bairro);
+	  List<Matricula> getAll();
 
 	  /**
 	   * Deleta uma Matrícula específica.

@@ -2,7 +2,10 @@ package br.com.dio.bill.academiadigital.controller;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -28,12 +31,17 @@ public class AlunoController {
 	}
 	
 	@PostMapping
-	public Aluno create(@RequestBody AlunoForm form) {
+	public Aluno create(@Valid @RequestBody AlunoForm form) {
 		return service.create(form);
 	}
 	
 	@GetMapping("/avaliacoes/{id}")
 	public List<AvaliacaoFisica> getAllAvaliacaoFisica(@PathVariable Long id){
 		return service.getAllAvaliacaoFisicaId(id);
+	}
+	
+	@DeleteMapping("/{id}")
+	public void delete(@PathVariable Long id) {
+		service.delete(id);
 	}
 }

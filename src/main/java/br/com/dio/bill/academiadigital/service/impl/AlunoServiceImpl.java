@@ -30,13 +30,12 @@ public class AlunoServiceImpl implements IAlunoService{
 
 	@Override
 	public Aluno get(Long id) {
-		// TODO Auto-generated method stub
-		return null;
+		Aluno aluno = repository.findById(id).get();
+		return aluno;
 	}
 
 	@Override
 	public List<Aluno> getAll(String dataDeNascimento) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 	
@@ -53,8 +52,7 @@ public class AlunoServiceImpl implements IAlunoService{
 
 	@Override
 	public void delete(Long id) {
-		// TODO Auto-generated method stub
-		
+		repository.deleteById(id);
 	}
 
 	@Override
